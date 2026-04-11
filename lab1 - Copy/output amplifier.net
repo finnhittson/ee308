@@ -1,0 +1,51 @@
+* C:\Users\pig\Documents\ee308\ee308\lab1 - Copy\output amplifier.asc
+R1 N002 N010 2k
+Q1 N010 in N018 0 2N3904
+R5 N018 N023 3k
+Q2 N001 N007 N018 0 2N3904
+R6 N007 0 1k
+R7 out N007 10k
+Q6 N005 N006 N009 0 2N3904
+Q9 N021 N016 N017 0 2N3906
+R9 N009 out 5
+R10 out N017 5
+R12 N023 out 50
+R13 N014 N018 160
+C2 N018 N014 330p
+V1 N002 0 12
+V2 0 N023 12
+V3 in 0 AC 1
+R16 N021 N023 300
+R14 N002 N005 300
+C1 out N007 2p
+C3 N002 N004 10n
+R8 N002 N003 300
+D1 N003 N004 1N4148
+R17 N022 N023 300
+C4 N019 N023 10n
+Q3 N016 N019 N020 0 2N3904
+R18 N004 N019 20k
+Q4 N006 N004 N001 0 2N3906
+R19 N020 N023 100
+R20 N002 N001 50
+D2 N006 N012 1N4148
+D3 N012 N016 1N4148
+D4 N019 N022 1N4148
+R2 N002 N007 15k
+.model D D
+.lib C:\Users\pig\Documents\LTspiceXVII\lib\cmp\standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\pig\Documents\LTspiceXVII\lib\cmp\standard.bjt
+* want output centered at 6V\nbiasing to 2mA from BK3001\nR=(12-6)/1mA=6k
+* choose diff gain G=10\nre=25mV/Ic\n10=6k/(2(Re+re)) =>Re=275
+* choose common mode gain of 0.5\n0.5=6k/(2Rtail+Re+re) => Rtail=5.85k
+* from app notes
+.ac oct 100 1k 1Gig
+* (+)
+* (-)
+* .tran 20u
+.op
+* pot
+.backanno
+.end
