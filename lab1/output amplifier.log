@@ -4,57 +4,54 @@ Warning: Multiple definitions of model "2scr375p" Type: BJT
 Warning: Multiple definitions of model "bc857b" Type: BJT
 Warning: Multiple definitions of model "bc847c" Type: BJT
 Warning: Multiple definitions of model "bc847b" Type: BJT
-WARNING: Node NC_01 is floating.
-
-WARNING: Less than two connections to node NC_01.  This node is used by C1.
 Direct Newton iteration for .op point succeeded.
 Semiconductor Device Operating Points:
                         --- Diodes ---
 Name:      d2          d1
 Model:   1n4148      1n4148
-Id:      9.83e-03    9.83e-03
-Vd:      6.93e-01    6.93e-01
-Req:     4.61e+00    4.61e+00
-CAP:     4.35e-09    4.35e-09
+Id:      4.85e-03    4.85e-03
+Vd:      6.58e-01    6.58e-01
+Req:     9.35e+00    9.35e+00
+CAP:     2.15e-09    2.15e-09
 
                         --- Bipolar Transistors ---
 Name:       q3          q9          q6          q2          q1
 Model:    2n3906      2n3906      2n3904      2n3904      2n3904
-Ib:      -4.79e-04    2.25e-11    7.17e-02    7.59e-06    3.82e-06
-Ic:      -8.15e-02   -1.97e-11    2.59e-02    2.48e-03    1.27e-03
-Vbe:     -7.91e-01    2.82e+00    2.26e+00    6.77e-01    6.59e-01
-Vbc:      2.16e+00    1.97e+01    2.23e+00   -9.44e+00   -1.12e+01
-Vce:     -2.95e+00   -1.68e+01    2.41e-02    1.01e+01    1.19e+01
-BetaDC:   1.70e+02   -8.75e-01    3.61e-01    3.26e+02    3.33e+02
-Gm:       2.70e+00    1.92e-60    2.65e+00    9.53e-02    4.89e-02
-Rpi:      5.40e+01    1.00e+12    1.75e+01    3.41e+03    6.78e+03
+Ib:      -2.19e-05   -1.21e-04    1.36e-09    1.98e-06    2.84e-06
+Ic:      -4.85e-03   -2.41e-02    4.65e-07    6.62e-04    9.47e-04
+Vbe:     -6.94e-01   -7.42e-01    4.54e-01    6.42e-01    6.51e-01
+Vbc:      1.21e+01    5.12e+00   -1.27e+01   -1.15e+01   -1.13e+01
+Vce:     -1.27e+01   -5.86e+00    1.32e+01    1.22e+01    1.20e+01
+BetaDC:   2.22e+02    1.99e+02    3.41e+02    3.34e+02    3.33e+02
+Gm:       1.85e-01    8.83e-01    1.80e-05    2.56e-02    3.65e-02
+Rpi:      1.18e+03    2.14e+02    1.88e+07    1.30e+04    9.10e+03
 Rx:       2.00e+01    2.00e+01    2.00e+01    2.00e+01    2.00e+01
-Ro:       1.25e+03    0.00e+00    1.54e-01    4.42e+04    8.76e+04
-Cbe:      9.95e-10    5.97e-12    5.36e-09    4.61e-11    2.97e-11
-Cbc:      2.88e-12    1.51e-12    2.72e-06    1.69e-12    1.60e-12
+Ro:       2.31e+04    4.37e+03    2.43e+08    1.68e+05    1.17e+05
+Cbe:      8.10e-11    3.26e-10    1.08e-11    2.14e-11    2.53e-11
+Cbc:      1.76e-12    2.28e-12    1.54e-12    1.59e-12    1.60e-12
 Cjs:      0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
-BetaAC:   1.46e+02    1.92e-48    4.65e+01    3.25e+02    3.32e+02
+BetaAC:   2.19e+02    1.89e+02    3.38e+02    3.34e+02    3.32e+02
 Cbx:      0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
-Ft:       4.31e+08    2.13e-02    1.55e+05    3.17e+08    2.49e+08
+Ft:       3.57e+08    4.28e+08    2.32e+05    1.77e+08    2.16e+08
 
 
 Note: .fourier statements are only valid with a .tran command.
       No Fourier analysis performed.
 
 
-Date: Sat Apr 11 14:25:44 2026
-Total elapsed time: 0.103 seconds.
+Date: Mon Apr 13 15:34:21 2026
+Total elapsed time: 0.115 seconds.
 
 tnom = 27
 temp = 27
 method = trap
-totiter = 10
+totiter = 8
 traniter = 0
 tranpoints = 0
 accept = 0
 rejected = 0
-matrix size = 39
-fillins = 48
+matrix size = 38
+fillins = 40
 solver = Normal
-Matrix Compiler1:     277 opcodes
-Matrix Compiler2: 4.12 KB object code size
+Matrix Compiler1:     250 opcodes
+Matrix Compiler2: 3.91 KB object code size
