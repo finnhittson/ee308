@@ -1,0 +1,51 @@
+* C:\Users\pig\Documents\ee308\lab1\output amplifier.asc
+R1 N001 N004 750
+R3 N011 N017 50
+R4 N013 N017 50
+Q1 N004 N010 N011 0 2N3904
+R5 N017 N020 5k
+Q2 N001 N006 N013 0 2N3904
+R6 N006 0 700
+R7 N007 N006 10k
+R8 N018 N020 1k
+Q6 N003 N005 N008 0 2N3904
+Q9 N019 N018 N016 0 2N3906
+R9 N008 N007 5
+R10 N007 N016 5
+R12 0 out 50
+V1 N001 0 12
+V2 0 N020 12
+Q3 N005 N004 N001 0 2N3906
+R11 N010 N009 200
+R15 out N007 50
+D1 N014 N018 1N4148
+D2 N005 N014 1N4148
+R16 N019 N020 200
+R14 N001 N003 200
+C1 N007 N006 0.2p
+R2 N009 in {pos+1}
+R13 N015 N009 {potVal - pos +1}
+R17 0 N015 12
+C2 N001 N003 20n
+C3 N019 N020 20n
+C4 N013 N012 600p
+R18 N012 N011 100
+V3 in 0 PULSE(-50m 50m 0 1n 1n 0.5u 1u) AC 1
+R19 N002 N006 100k
+R20 N001 N002 825
+R21 0 N002 175
+.model D D
+.lib C:\Users\pig\Documents\LTspiceXVII\lib\cmp\standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\pig\Documents\LTspiceXVII\lib\cmp\standard.bjt
+* .ac oct 100 1k 1Gig
+* (+)
+* (-)
+* 0.5W
+* .step param pos 0 2k 100
+.tran 0 20u 18u
+.param potVal = 1k
+.param pos = 500
+.backanno
+.end
