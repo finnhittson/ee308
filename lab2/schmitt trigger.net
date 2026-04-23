@@ -1,0 +1,48 @@
+* C:\Users\adrik\Documents\ee308\lab2\schmitt trigger.asc
+V1 N005 0 PULSE(-1 1 0 {0.5 /f} {0.5 /f} 0 {1/f})
+Q1 N004 N006 N007 0 2N3904
+Q2 N003 n3 N007 0 2N3904
+R4 N001 N004 {Rdiff1}
+R5 N001 N003 {Rdiff1}
+Q3 out N004 N002 0 2N3906
+Q4 n1 N003 N002 0 2N3906
+D1 N003 N004 1N4148
+D2 N004 N003 1N4148
+D3 n4 n3 1N4148
+D4 n4 n1 1N4148
+D5 n3 n2 1N4148
+D6 n1 n2 1N4148
+R6 N001 n4 15k
+R8 n2 N012 12k
+R10 n1 N012 {Rdiff2}
+R11 out N012 {Rdiff2}
+V2 N001 0 12
+R13 n3 0 500
+D9 N009 0 1N4148
+D12 0 N010 1N4148
+R1 N001 N002 4.7k
+D13 n1 N009 1N4148
+D14 N010 n1 1N4148
+V3 0 N012 12
+R7 out 0 1k
+Q5 N007 N008 N011 0 NPN
+R3 N011 N012 2k
+R9 N008 N012 30k
+R12 N008 0 10k
+R2 N006 N005 1k
+R14 0 N006 1k
+C1 N006 N005 56p
+.model D D
+.lib C:\Users\adrik\AppData\Local\LTspice\lib\cmp\standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\adrik\AppData\Local\LTspice\lib\cmp\standard.bjt
+.tran 0 20u 18u
+.param f=1Meg
+* (+)
+* (-)
+* chaning R3 varies duty cycle
+.param Rdiff2=10.5k
+.param Rdiff1=5.75k
+.backanno
+.end
